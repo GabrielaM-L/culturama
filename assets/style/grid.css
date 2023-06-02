@@ -1,0 +1,27 @@
+.banner {
+    display: grid; /* posiciona os elementos um emabixo do outro */
+    gap: 1rem; /* Coloca espaçamento entre os elementos do grid */
+}
+
+/* Posicionamento dos elementos em um grid */
+
+.banner img:nth-child(1) {     /* Pega a imagem 1 do grid */
+        grid-column: 1/3; /* Quer dizer que a imagem vai da primeira linha da primeira columa 1 até a última linha da última coluna. Nesse caso, ocupa a tela toda.  */
+    }
+
+.banner img:nth-child(4) {
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+
+@media (min-width: 720px) {
+    .banner img:nth-child(1) {     
+        grid-column: 1/2; 
+        grid-row: 1/3;
+    }
+
+    .banner img:nth-child(4) {
+        grid-column: 3/4;
+        grid-row: 1/3;
+    }
+}

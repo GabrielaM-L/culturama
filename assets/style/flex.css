@@ -1,0 +1,44 @@
+.menu {
+    display: flex; /* alinha os itens na horizontal, lado a lado. Transforma os itens em flex itens. */
+    justify-content: space-evenly; /* Dá espaçamento igual entre os itens. */
+    align-items: center; /* Alinha os itens verticalmente, neste caso, no centro. */
+    flex-wrap: wrap; /* Promove quabra de linha quando os itens não cabem no mesmo container. Usado na responsividade do cabeçalho.*/
+    column-gap: 33px; /* Aplica espaçamento ao lado dos itens. serve para criar uma lacuna vertical entre elementos. Usado na responsividade. */
+}
+
+/* Responsividade para tablet */
+
+@media (min-width: 720px) {
+    .menu {
+        column-gap: 75px;
+    }
+}
+
+/* Criando o layout para desktop */
+
+@media (min-width: 1440px) {
+    .menu {
+        column-gap: 105px;
+        flex-wrap: nowrap; /* Assim não há quebra de linha quando um elemento não couber na página. Ele se ajusta para caber.*/
+    }
+/* Mudar os itens do menu de lugar.*/
+    .menu__item:nth-child(1) {
+        order: 1;
+    }
+    .menu__item:nth-child(2) {
+        order: 3;
+    }
+    .menu__item:nth-child(3) {
+        order: 4;
+    }
+    .menu__item:nth-child(4) {
+        order: 5;
+    }
+    .menu__item:nth-child(5) {
+        order: 2;
+    }
+    
+}
+
+
+
